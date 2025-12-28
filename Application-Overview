@@ -1,0 +1,18 @@
+**Official Product Summary: Origin-Hunter v1.0**
+"Hunt the Origin. Bypass the WAF."
+
+Origin-Hunter is a surgical reconnaissance suite built to strip away the "Security Theater" of modern Web Application Firewalls (WAFs). While standard tools rely on basic brute-forcing, Origin-Hunter utilizes live infrastructure fingerprints to expose the "True Origin" servers that targets think are hidden.
+
+**Key Technical Advantages:**
+
+**The SSL Sniper:** Automatically extracts Subject Alternative Names (SANs) from live SSL certificates to discover subdomains that never appear in standard wordlists.
+
+**Origin-Match Engine:** Uses a high-fidelity Body_Match(100%) algorithm to identify the raw IP address of the backend server. If a server serves the target’s content without WAF headers, it flags a Critical bypass.
+
+**WAF Fingerprinting:** Native detection for AWS WAF, Cloudflare, and Akamai, providing immediate context on the target's defensive layer.
+
+**The Siege Engine:** Optimized Go-concurrency capable of processing 4.8M+ record wordlists with ultra-stable thread management and zero connection poisoning.
+
+**Zero-Dependency Binary:** Statically linked for Linux; move the binary to your Proxmox lab or a remote VPS and start the hunt instantly.
+
+**The Bottom Line:** Origin-Hunter is designed for the high-end researcher. One successful Origin IP discovery can pay for the tool ten times over in a single Bug Bounty program.
